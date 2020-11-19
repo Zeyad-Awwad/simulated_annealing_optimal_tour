@@ -2,7 +2,10 @@
 
 This method uses simulated annealing to estimate the optimal tour between N points. Each step consists of a random change that is acceped or rejected based on its cost.
 
-Any changes that reduce the cost are automatically accepted, while changes that increase the cost are accepted at random. The acceptance rate decays exponentially with the change in cost $\delta$. 
+Any changes that reduce the cost are automatically accepted, while changes that increase the cost are accepted at random. The acceptance rate decays exponentially with the change in cost (delta). 
+
+<img src="https://render.githubusercontent.com/render/math?math=e^{- \delta / T}">
+
 
 $$ e^{ - \delta / T} $$
 
