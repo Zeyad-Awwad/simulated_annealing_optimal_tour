@@ -2,10 +2,9 @@
 
 This method uses simulated annealing to estimate the optimal tour between N points. Each step consists of a random change that is acceped or rejected based on its cost.
 
-Any changes that reduce the cost are automatically accepted, while changes that increase the cost are accepted at random. The acceptance rate decays exponentially with the change in cost <img src="https://render.githubusercontent.com/render/math?math=\Delta">. 
+Any changes that reduce the cost are automatically accepted, while changes that increase the cost are accepted at random. The probability of acceptance decays exponentially as the change in cost <img src="https://render.githubusercontent.com/render/math?math=\Delta"> increases. 
 
-<img src="https://render.githubusercontent.com/render/math?math=e^{- \Delta / T}">
-
+<img src="https://render.githubusercontent.com/render/math?math=P = e^{- \Delta / T}">
 
 
 The curve is primarily tuned by the temperature, which is gradually reduced over time. A high initial temperature helps the method explore the solution space without getting trapped in local minima. The temperature is reduced over time to increasingly prioritize directly beneficial changes over exploration.
